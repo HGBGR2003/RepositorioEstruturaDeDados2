@@ -2,7 +2,7 @@ package aluno.henrique;
 
 public class exercicio6 {
     public static void main(String[] args) {
-        int numeroBinario = numeroDecimal(222);
+        int numeroBinario = numeroDecimal(3);
         System.out.println(numeroBinario);
     }
     

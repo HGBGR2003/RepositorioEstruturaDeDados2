@@ -3,6 +3,7 @@ package aluno.henrique;
 public class exercicio5 {
     public static void main(String[] args) {
         int numeroNormal = quantasVezesApareceu(10);
+        System.out.println(numeroNormal);
     }
 
     public static int quantasVezesApareceu(int numero){

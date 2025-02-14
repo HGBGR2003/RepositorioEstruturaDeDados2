@@ -5,15 +5,15 @@ import java.io.File;
 public class exercicio7 {
     public static void main(String[] args) {
         File folder = new File("."); 
-		File[] listOfFiles = folder.listFiles(); 
+	File[] listOfFiles = folder.listFiles(); 
 
         
         for(File file: listOfFiles){
             System.out.println("Absolute path: " + file.getAbsolutePath()); 
-			System.out.println("Name: " + file.getName()); 
-			System.out.println("Is directory: " + file.isDirectory());
-			System.out.println("Is file: " + file.isFile()); 
-			System.out.println("");
+	    System.out.println("Name: " + file.getName()); 
+	    System.out.println("Is directory: " + file.isDirectory());
+	    System.out.println("Is file: " + file.isFile()); 
+	    System.out.println("");
         }
 
         //Professor, pra ficar melhor pode comentar a parte de cima, para ficar melhor a mensagem.
@@ -52,6 +52,5 @@ public class exercicio7 {
 
         return false;
     }
-
-    
+	
 }

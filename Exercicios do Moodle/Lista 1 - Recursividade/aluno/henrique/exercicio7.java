@@ -7,22 +7,42 @@ public class exercicio7 {
         File folder = new File("."); 
 		File[] listOfFiles = folder.listFiles(); 
 
+        /* 
         for(File file: listOfFiles){
             System.out.println("Absolute path: " + file.getAbsolutePath()); 
 			System.out.println("Name: " + file.getName()); 
 			System.out.println("Is directory: " + file.isDirectory());
 			System.out.println("Is file: " + file.isFile()); 
 			System.out.println("");
-        }
+        }*/
+
+        boolean pesquisa = buscarArquivo("C:\\Users\\henri\\OneDrive\\Documentos", "maximos.pdf");
     }
 
     public static boolean buscarArquivo(String caminhoOrigem, String nomeArquivo){
         File arquivo;
-        arquivo = new File("C:\\\\Users\\\\henri\\\\OneDrive\\\\Documentos"); 
-        //Continuo depois.
+        arquivo = new File(caminhoOrigem);
 
-        if (arquivo != null) {
-            arquivo.exists();
+        File[] lista = arquivo.listFiles();
+
+        if (!arquivo.exists()) {
+            return false;
+        }
+
+        if (arquivo.isDirectory()) {
+            if (lista != null) {
+                for(File novoArquivo: lista){
+                    if (novoArquivo.isFile() && novoArquivo.getName().equals(nomeArquivo)) {
+                        System.out.println("Arquivo encontrado: " + novoArquivo);
+                        return true;
+                    }
+
+                    if (novoArquivo.isDirectory()) {
+                        
+                    }
+
+                }
+            }
         }
 
         return false;
